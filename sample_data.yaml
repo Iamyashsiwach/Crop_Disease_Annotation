@@ -1,5 +1,5 @@
 # Crop Disease Segmentation Dataset Configuration
-# Updated configuration for YOLOv8 segmentation training
+# This file should be placed in your crop_disease_seg/ directory as data.yaml
 
 # Dataset root directory (relative to this file)
 path: .
@@ -9,12 +9,20 @@ train: images/train
 val: images/val
 
 # Class names and their corresponding indices
-# Update these according to your specific disease types
 names:
-  0: Crop_Disease
+  0: healthy_leaf
+  1: bacterial_blight
+  2: leaf_spot
+  3: rust
+  4: powdery_mildew
+  5: downy_mildew
+  6: mosaic_virus
+  7: yellowing
+  8: necrosis
+  9: wilting
 
 # Number of classes
-nc: 1
+nc: 10
 
 # Optional: Additional dataset information
 dataset_info:
@@ -23,5 +31,9 @@ dataset_info:
   format: "YOLO segmentation format"
   annotation_type: "polygon_segmentation"
   
-# Note: For segmentation, ensure your label files contain polygon coordinates
-# Format: class_id x1 y1 x2 y2 x3 y3 ... (normalized coordinates)
+# Optional: Dataset statistics (you can add these after analyzing your dataset)
+# dataset_stats:
+#   total_images: 1000
+#   train_images: 800
+#   val_images: 200
+#   avg_objects_per_image: 2.5 
