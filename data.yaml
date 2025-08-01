@@ -1,27 +1,5 @@
-# Crop Disease Segmentation Dataset Configuration
-# Updated configuration for YOLOv8 segmentation training
-
-# Dataset root directory (relative to this file)
-path: .
-
-# Training and validation image directories (relative to 'path')
-train: images/train
-val: images/val
-
-# Class names and their corresponding indices
-# Update these according to your specific disease types
 names:
   0: Crop_Disease
-
-# Number of classes
-nc: 1
-
-# Optional: Additional dataset information
-dataset_info:
-  description: "Crop disease segmentation dataset with polygon annotations"
-  source: "CVAT annotation tool"
-  format: "YOLO segmentation format"
-  annotation_type: "polygon_segmentation"
-  
-# Note: For segmentation, ensure your label files contain polygon coordinates
-# Format: class_id x1 y1 x2 y2 x3 y3 ... (normalized coordinates)
+path: .
+train: images/train
+val: images/val
