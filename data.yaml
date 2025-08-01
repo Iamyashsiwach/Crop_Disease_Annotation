@@ -1,0 +1,4 @@
+names:
+  0: Crop_Disease
+path: .
+train: train.txt
